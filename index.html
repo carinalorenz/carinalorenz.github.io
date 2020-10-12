@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            Trying HTML
+        </title>
+        <style>
+            h1 {
+                font-weight: bold;
+                color: crimson;
+            }
+            button {
+                color : black;
+                background-color : palevioletred;
+                height : 40px;
+                width : 60px;
+            }
+            button:hover {
+                background-color : lightyellow;
+            }
+            a {
+                color : blue;
+            }
+            a:hover {
+                color : greenyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Very cool Website</h1>
+        <a href="https://corinnabuerger.github.io/index.html" target="_blank"><button>Click me!</button></a>
+        <a href="https://corinnabuerger.github.io/index.html" target="_blank"> Awesome website!</a>
+        <a href="https://danielschuette.github.io/index.html" target="_blank"> Another awesome website!</a>
+        <ul>
+            <li>this</li>
+            <li>is</li>
+            <li>a</li>
+            <li>list</li>
+        </ul>
+        <ul>
+            {% for note in notes %}
+                <li>{{ note }}</li>
+            {% endfor %}
+        </ul>
+        <form action="{{ url_for('index') }}" method="POST">
+            <input type="text" name="note" placeholder="Enter your note here">
+            <button>Add note</button>
+
+        </form>
+    </body>
+</html>
